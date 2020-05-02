@@ -1,11 +1,14 @@
 # DataBindingDemo
-DataBinding with clean architecture
+Android’s Data Binding with MVVM pattern (Kotlin lanaguage , support androidx)
+
+
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.61-blue.svg)](https://kotlinlang.org)
 
 Introduction
 --------
 Are you looking for databinding  sample source code?
-(You can learn my code. In my project. I 'd written by Databinding with MVVM pattern.) 
+(You can learn my code. In my project. I 'd written by Databinding with MVVM pattern.)
+
 
 Screenshoot
 --------
