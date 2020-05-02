@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -38,7 +39,17 @@ class SampleActivity : AppCompatActivity() {
            binding.lifecycleOwner = this  // use Fragment.viewLifecycleOwner for fragments
            adapter = UserListAdapter(applicationContext, arrayListOf())
            binding.myAdapter = adapter
+
+           binding.setOnDarkModeChange { buttonView, isChecked ->
+            println("buttonView = [$buttonView], isChecked = [$isChecked]")
+               when(isChecked)
+               {
+                   true -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                       else -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+               }
+           }
     }
+
 
 
     private fun setupObservers() {

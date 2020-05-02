@@ -20,7 +20,6 @@
         android:layout_margin="1dp"
         android:elevation="10dp"
         android:onClick="@{() -> itemClickListener.cardClicked(user)}"
-        app:cardBackgroundColor="#FBF7F7"
         card_view:cardCornerRadius="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,7 +55,7 @@
                 android:layout_marginRight="149dp"
                 android:layout_marginBottom="110dp"
                 android:text="@{user.name}"
-                android:textColor="@color/colorPrimary"
+
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +73,7 @@
                 android:layout_marginRight="149dp"
                 android:layout_marginBottom="65dp"
                 android:text="@{user.age}"
-                android:textColor="@color/colorPrimary"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/userImage"
@@ -85,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{user.email}"
-                android:textColor="@color/colorPrimary"
+
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="3dp"
-                android:background="#000000"
+                android:background="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
