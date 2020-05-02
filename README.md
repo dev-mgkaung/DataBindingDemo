@@ -24,7 +24,7 @@ Screenshoot
 [support-lib]: https://developer.android.com/topic/libraries/support-library/index.html
 [arch]: https://developer.android.com/arch
 [data-binding]: https://developer.android.com/topic/libraries/data-binding/index.html
-[espresso]: https://google.github.io/android-testing-support-library/docs/espresso/
+[mvvm]: https://blog.mindorks.com/mvvm-architecture-android-tutorial-for-beginners-step-by-step-guide
 [coroutines]: https://github.com/Kotlin/kotlinx.coroutines
 [retrofit]: http://square.github.io/retrofit
 [glide]: https://github.com/bumptech/glide
