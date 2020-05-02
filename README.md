@@ -1,7 +1,6 @@
 # DataBindingDemo
 DataBinding with clean architecture
-# DataBindingDemo
-DataBinding with clean architecture
+
 
 
 Screenshoot
