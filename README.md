@@ -12,6 +12,9 @@ Screenshoot
 
 Rest Api (MockApi)
 --------
+WHAT IS MOCK API?
+MockAPI is a simple tool that lets you easily mock up APIs, generate custom data, and preform operations on it using RESTful interface. MockAPI is meant to be used as a prototyping/testing/learning tool.
+
 This is free mock api website https://mockapi.io/
 
 ### Libraries
