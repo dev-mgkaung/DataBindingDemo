@@ -1,7 +1,10 @@
 # DataBindingDemo
 DataBinding with clean architecture
 
-
+Introduction
+--------
+Are you looking for databinding  sample source code?
+(You can learn my code. In my project. I 'd written by Databing with MVVM pattern.) 
 
 Screenshoot
 --------
