@@ -2,8 +2,6 @@
 DataBinding with clean architecture
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.61-blue.svg)](https://kotlinlang.org)
 
-<img alt="Get it on Google Play" src="google_play_badge/en_get.svg" height="100" width="200" /></a>
-
 Introduction
 --------
 Are you looking for databinding  sample source code?
