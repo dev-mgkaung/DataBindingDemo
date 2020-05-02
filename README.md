@@ -10,6 +10,9 @@ Screenshoot
 --------
   <img alt="English Unicdoe Choose" src="https://github.com/dev-mgkaung/DataBindingDemo/blob/master/screenshot/databinding_cover.jpg" />
 
+Rest Api (MockApi)
+--------
+This is free mock api website https://mockapi.io/
 
 ### Libraries
 * [Android Support Library][support-lib]
