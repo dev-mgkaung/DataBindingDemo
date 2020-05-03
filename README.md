@@ -9,6 +9,13 @@ Introduction
 Are you looking for databinding  sample source code?
 (You can learn my code. In my project. I 'd written by Databinding with MVVM pattern.)
 
+Project Structure
+--------
+Step 1. Data fetch from server (Mock api) ** Using OkHttp and Retrofit 2
+Step 2. Response data  save in local database ** Using Room Persistence Library
+Step 3. Offline Data show with Recyclerview Loading partial data   ** Using Paging Library
+Step 4. Swith Theme - Dark Night   ** Using AppCompactDelegate
+Step 5. Project Framework using MVVM Pattern with Databinding
 
 Screenshoot
 --------
