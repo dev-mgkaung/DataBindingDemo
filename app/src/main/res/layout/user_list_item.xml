@@ -6,7 +6,7 @@
     <data>
         <variable
             name="user"
-            type="jackpack.kotlin.databindingdemo.datas.model.UserVO"/>
+            type="jackpack.kotlin.databindingdemo.datas.remotes.model.UserVO"/>
         <variable
             name="itemClickListener"
             type="jackpack.kotlin.databindingdemo.views.callbacks.CustomClickListener" />

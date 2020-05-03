@@ -1,6 +1,6 @@
 package jackpack.kotlin.databindingdemo.datas.apis
 
-import jackpack.kotlin.databindingdemo.datas.model.UserVO
+import jackpack.kotlin.databindingdemo.datas.remotes.model.UserVO
 import jackpack.kotlin.databindingdemo.utilities.GET_USERS
 import retrofit2.http.GET
 

@@ -30,4 +30,5 @@ object ImageBindingAdapter {
                 .into(imageView)
         }
     }
+
 }

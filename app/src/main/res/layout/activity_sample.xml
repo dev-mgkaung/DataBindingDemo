@@ -9,6 +9,9 @@
         <variable
             name="onDarkModeChange"
             type="android.widget.CompoundButton.OnCheckedChangeListener"/>
+        <variable
+            name="viewModel"
+            type="jackpack.kotlin.databindingdemo.viewmodels.SimpleViewModel"/>
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -28,68 +31,71 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.AppBarLayout>
-
-        <RelativeLayout
-            android:layout_marginTop="?android:actionBarSize"
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
-
-           <LinearLayout
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_marginTop="?android:actionBarSize"
+    android:id="@+id/swipeRefresh"
+    android:onRefreshListener="@{() -> viewModel.onRefresh()}">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_height="80dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Dark Mode"
-            android:layout_marginLeft="15dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:drawableLeft="@drawable/ic_darkmode"
-            android:layout_height="wrap_content"/>
-        <Switch
-            android:id="@+id/switchButton"
-            android:layout_width="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content"
-            android:onCheckedChanged="@{onDarkModeChange}"
-            />
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    </RelativeLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:padding="4dp"
-        android:visibility="visible"
-        android:adapter="@{myAdapter}"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
-</LinearLayout>
-            <ProgressBar
-                android:id="@+id/progressBar"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="100dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-        </RelativeLayout>
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="80dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Dark Mode"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_darkmode"
+                    android:layout_height="wrap_content"/>
+                <Switch
+                    android:id="@+id/switchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:onCheckedChanged="@{onDarkModeChange}"
+                    />
 
-
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:visibility="visible"
+                android:adapter="@{myAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

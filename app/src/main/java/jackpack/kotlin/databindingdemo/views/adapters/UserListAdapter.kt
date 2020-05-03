@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import jackpack.kotlin.databindingdemo.BR
 import jackpack.kotlin.databindingdemo.databinding.UserListItemBinding
-import jackpack.kotlin.databindingdemo.datas.model.UserVO
+import jackpack.kotlin.databindingdemo.datas.remotes.model.UserVO
 import jackpack.kotlin.databindingdemo.views.callbacks.CustomClickListener
 
 /**
@@ -27,7 +27,6 @@ class UserListAdapter(private val contexts: Context,private val users: ArrayList
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bind(users[position])
-        Log.e("user data",users[position].email)
         holder.binding.setItemClickListener(this)
     }
 
