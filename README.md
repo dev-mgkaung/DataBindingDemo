@@ -11,12 +11,13 @@ Are you looking for databinding  sample source code?
 
 Project Structure
 --------
-Step 1. Data fetch from server (Mock api) ** Using OkHttp and Retrofit 2
-Step 2. Response data  save in local database ** Using Room Persistence Library
-Step 3. Offline Data show with Recyclerview Loading partial data   ** Using Paging Library
-Step 4. Swith Theme - Dark Night   ** Using AppCompactDelegate
-Step 5. Project Framework using MVVM Pattern with Databinding
-
+<ol>
+  <li>Step 1. Data fetch from server (Mock api) ** Using OkHttp and Retrofit 2 </li>
+<li>Step 2. Response data  save in local database ** Using Room Persistence Library </li>
+<li>Step 3. Offline Data show with Recyclerview Loading partial data   ** Using Paging Library </li>
+<li>Step 4. Swith Theme - Dark Night   ** Using AppCompactDelegate </li>
+<li>Step 5. Project Framework using MVVM Pattern with Databinding </li>
+</ol>
 Screenshoot
 --------
   <img alt="English Unicdoe Choose" src="https://github.com/dev-mgkaung/DataBindingDemo/blob/master/screenshot/databinding_cover.jpg" />
