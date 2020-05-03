@@ -1,6 +1,7 @@
 package jackpack.kotlin.databindingdemo.datas.local.daos
 
-import androidx.lifecycle.LiveData
+
+import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -13,8 +14,8 @@ import jackpack.kotlin.databindingdemo.datas.remotes.model.UserVO
 @Dao
 interface UserDao {
 
-    @Query("SELECT * from user_table ORDER BY id ASC")
-    fun getUserDataFromRoom(): LiveData<List<UserVO>>
+    @Query("SELECT * from user_table ORDER BY user_id ASC")
+    fun getUserDataFromRoom():  DataSource.Factory<Int,UserVO>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
      fun insert(userdata: UserVO)

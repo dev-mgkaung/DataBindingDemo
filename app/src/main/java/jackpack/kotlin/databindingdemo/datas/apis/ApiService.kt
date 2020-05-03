@@ -11,6 +11,6 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET(GET_USERS)
-    suspend  fun getUsers() : List<UserVO>
+    suspend  fun getUsersDataFromServer() : List<UserVO>
 
 }

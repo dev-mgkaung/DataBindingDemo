@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import jackpack.kotlin.databindingdemo.BR
 import jackpack.kotlin.databindingdemo.databinding.UserListItemBinding
@@ -14,29 +16,34 @@ import jackpack.kotlin.databindingdemo.views.callbacks.CustomClickListener
 /**
  * Created by Mg Kaung on 5/2/2020.
  */
-class UserListAdapter(private val contexts: Context,private val users: ArrayList<UserVO>) : RecyclerView.Adapter<UserListAdapter.DataViewHolder>() ,
+
+class UserListAdapter(context: Context) : PagedListAdapter<UserVO, UserListAdapter.DataViewHolder>(diffCallback) ,
     CustomClickListener {
-    private val context: Context? = contexts
+    private val mContext: Context ?=context
+    companion object {
+
+        private val diffCallback = object : DiffUtil.ItemCallback<UserVO>() {
+            override fun areItemsTheSame(oldItem: UserVO, newItem: UserVO): Boolean =
+                oldItem.user_id == newItem.user_id
+
+            override fun areContentsTheSame(oldItem: UserVO, newItem: UserVO): Boolean =
+                oldItem == newItem
+        }
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = UserListItemBinding.inflate(inflater)
         return DataViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = users.size
-
-    override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        holder.bind(users[position])
-        holder.binding.setItemClickListener(this)
+     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
+        val userVO: UserVO? = getItem(position)
+         userVO?.let { holder.bind(it) }
+         holder.binding.setItemClickListener(this)
     }
 
-    fun addUsers(users: List<UserVO>) {
-        this.users.apply {
-            clear()
-            addAll(users)
-        }
 
-    }
     inner class DataViewHolder(val binding: UserListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: UserVO) {
             binding.setVariable(BR.user,item)
@@ -44,8 +51,7 @@ class UserListAdapter(private val contexts: Context,private val users: ArrayList
         }
     }
 
-    override fun cardClicked(users: UserVO?) {
-        Toast.makeText(context, "You clicked " + users?.name,
-            Toast.LENGTH_LONG).show();
+    override fun cardClicked(userdata: UserVO?) {
+        Toast.makeText(mContext,"Selected item is = ${userdata?.name}",Toast.LENGTH_LONG).show()
     }
 }

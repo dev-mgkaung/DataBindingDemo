@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
  * Created by Mg Kaung on 5/3/2020.
  */
 
-@Database(entities = [UserVO::class], version = 1)
+@Database(entities = [UserVO::class], version =3)
 abstract class UserRoomDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao

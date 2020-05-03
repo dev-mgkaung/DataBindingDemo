@@ -8,5 +8,5 @@ import jackpack.kotlin.databindingdemo.datas.apis.ApiHelper
 
 class RemoteRepository(private val apiHelper: ApiHelper) {
 
-    suspend fun getUsers() = apiHelper.getUsers()
+    suspend fun getUsersDataFromServer() = apiHelper.getUsersDataFromServer()
 }

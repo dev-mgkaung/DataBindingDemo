@@ -7,11 +7,10 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 @Entity(tableName = "user_table")
 data class UserVO(
-    @PrimaryKey
-    @NonNull
-    @ColumnInfo(name = "id")
-    @SerializedName("id")
-    val id: String,
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "user_id")
+    val user_id: Int,
     @ColumnInfo(name = "age")
     @SerializedName("age")
     val age: String,
