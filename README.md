@@ -29,6 +29,7 @@ This is free mock api website https://mockapi.io/
 * [Retrofit][retrofit] for REST api communication
 * [Glide][glide] for image loading
 * [GSON][gson] for json convert
+* [Room Persistence Library][rooom] for Offline Data 
 * [MVVM architecture][mvvm] for clean Architecture
 
 
@@ -42,7 +43,7 @@ This is free mock api website https://mockapi.io/
 [retrofit]: http://square.github.io/retrofit
 [glide]: https://github.com/bumptech/glide
 [gson]: https://github.com/google/gson
-
+[room]: https://developer.android.com/topic/libraries/architecture/room
 
 App Screenshoot
 --------
