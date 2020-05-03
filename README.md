@@ -30,6 +30,7 @@ This is free mock api website https://mockapi.io/
 * [Glide][glide] for image loading
 * [GSON][gson] for json convert
 * [Room Persistence Library][room] for Offline Data 
+* [Paging][paging] for bounded data source
 * [MVVM architecture][mvvm] for clean Architecture
 
 
@@ -44,7 +45,7 @@ This is free mock api website https://mockapi.io/
 [glide]: https://github.com/bumptech/glide
 [gson]: https://github.com/google/gson
 [room]: https://developer.android.com/topic/libraries/architecture/room
-
+[paging]: https://developer.android.com/topic/libraries/architecture/paging
 App Screenshoot
 --------
 
