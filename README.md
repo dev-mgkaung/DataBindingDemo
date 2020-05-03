@@ -29,7 +29,7 @@ This is free mock api website https://mockapi.io/
 * [Retrofit][retrofit] for REST api communication
 * [Glide][glide] for image loading
 * [GSON][gson] for json convert
-* [Room Persistence Library][rooom] for Offline Data 
+* [Room Persistence Library][room] for Offline Data 
 * [MVVM architecture][mvvm] for clean Architecture
 
 
